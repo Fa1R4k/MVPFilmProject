@@ -1,9 +1,7 @@
 package com.example.mvpfilmproject
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.appcompat.app.AppCompatActivity
 import com.example.mvpfilmproject.ui.FilmDescFragment
 import com.example.mvpfilmproject.ui.FilmFragment
 
@@ -14,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         val onClick: (String, String, String) -> Unit = { a, b, c ->
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.desc_frame, FilmDescFragment.newInstance(a, b, c))
+                .replace(R.id.film_frame, FilmDescFragment.newInstance(a, b, c))
                 .addToBackStack("secondBack")
                 .commit()
         }

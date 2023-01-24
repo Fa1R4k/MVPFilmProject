@@ -16,7 +16,7 @@ class FilmDescFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return layoutInflater.inflate((R.layout.film_fragment), container, false)
+        return layoutInflater.inflate((R.layout.film_descr_fragment), container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -29,9 +29,9 @@ class FilmDescFragment : Fragment() {
     }
 
     companion object {
-        private val KEY_IMAGE = "KEY_IMAGE";
-        private val KEY_NAME = "KEY_NAME";
-        private val KEY_DESC = "KEY_DESC";
+        private val KEY_IMAGE = "KEY_IMAGE"
+        private val KEY_NAME = "KEY_NAME"
+        private val KEY_DESC = "KEY_DESC"
 
         fun newInstance(image: String, name: String, desc: String): FilmDescFragment {
             val fragment = FilmDescFragment()
