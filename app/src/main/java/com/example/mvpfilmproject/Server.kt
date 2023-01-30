@@ -1,6 +1,6 @@
-package com.example.mvpfilmproject.model
+package com.example.mvpfilmproject
 
-import com.example.mvpfilmproject.model.models.FilmData
+import com.example.mvpfilmproject.domain.models.FilmData
 
 object Server {
     fun getFilms(): List<FilmData> = listOf(

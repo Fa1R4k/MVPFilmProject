@@ -1,10 +1,10 @@
-package com.example.mvpfilmproject.ui
+package com.example.mvpfilmproject.ui.films
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mvpfilmproject.R
-import com.example.mvpfilmproject.model.models.FilmData
+import com.example.mvpfilmproject.domain.models.FilmData
 
 class FilmAdapter(private val listFilmData: List<FilmData>, private val onClick:(String, String, String) -> Unit) : RecyclerView.Adapter<FilmViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilmViewHolder {

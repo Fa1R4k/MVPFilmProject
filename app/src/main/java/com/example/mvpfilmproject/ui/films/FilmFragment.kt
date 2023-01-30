@@ -1,4 +1,4 @@
-package com.example.mvpfilmproject.ui
+package com.example.mvpfilmproject.ui.films
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mvpfilmproject.R
-import com.example.mvpfilmproject.model.models.FilmData
-import com.example.mvpfilmproject.presenter.FilmPresenter
-import com.example.mvpfilmproject.presenter.FilmPresenterImpl
+import com.example.mvpfilmproject.domain.models.FilmData
+import com.example.mvpfilmproject.ui.films.presenter.FilmPresenter
+import com.example.mvpfilmproject.ui.films.presenter.FilmPresenterImpl
 
 class FilmFragment(private val onClick:(String, String, String) -> Unit) : Fragment(), FilmView {
     private var presenter: FilmPresenter? = null
@@ -26,13 +26,12 @@ class FilmFragment(private val onClick:(String, String, String) -> Unit) : Fragm
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         presenter = FilmPresenterImpl(this)
-
         presenter?.getFilms()
     }
 
     override fun showFilms(films: List<FilmData>) {
-        val adapter = FilmAdapter(films, onClick)
         val recycler = view?.findViewById<RecyclerView>(R.id.rvFilmList)
+        val adapter = FilmAdapter(films, onClick)
         recycler?.adapter = adapter
         recycler?.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
     }

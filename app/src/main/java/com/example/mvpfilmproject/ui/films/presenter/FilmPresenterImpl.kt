@@ -1,8 +1,8 @@
-package com.example.mvpfilmproject.presenter
+package com.example.mvpfilmproject.ui.films.presenter
 
-import com.example.mvpfilmproject.model.FilmRepository
-import com.example.mvpfilmproject.model.FilmRepositoryImpl
-import com.example.mvpfilmproject.ui.FilmView
+import com.example.mvpfilmproject.domain.repository.FilmRepository
+import com.example.mvpfilmproject.data.FilmRepositoryImpl
+import com.example.mvpfilmproject.ui.films.FilmView
 
 class FilmPresenterImpl(private var view: FilmView?) : FilmPresenter {
 

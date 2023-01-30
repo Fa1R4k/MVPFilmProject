@@ -1,6 +1,6 @@
-package com.example.mvpfilmproject.model.models
+package com.example.mvpfilmproject.domain.models
 
-data class FilmData(
+data class UnpopularFilmData(
     val id: Int,
     val imageLink: String,
     val name: String,

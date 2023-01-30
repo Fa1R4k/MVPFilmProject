@@ -1,4 +1,4 @@
-package com.example.mvpfilmproject.ui
+package com.example.mvpfilmproject.ui.unpopular_films
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.mvpfilmproject.R
 
-class FilmDescFragment : Fragment() {
+class UnpopularFilmFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -33,8 +33,8 @@ class FilmDescFragment : Fragment() {
         private val KEY_NAME = "KEY_NAME"
         private val KEY_DESC = "KEY_DESC"
 
-        fun newInstance(image: String, name: String, desc: String): FilmDescFragment {
-            val fragment = FilmDescFragment()
+        fun newInstance(image: String, name: String, desc: String): UnpopularFilmFragment {
+            val fragment = UnpopularFilmFragment()
             val args = Bundle()
 
             args.putString(KEY_IMAGE, image)

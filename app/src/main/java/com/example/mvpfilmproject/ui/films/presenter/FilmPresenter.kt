@@ -1,4 +1,4 @@
-package com.example.mvpfilmproject.presenter
+package com.example.mvpfilmproject.ui.films.presenter
 
 interface FilmPresenter {
 
